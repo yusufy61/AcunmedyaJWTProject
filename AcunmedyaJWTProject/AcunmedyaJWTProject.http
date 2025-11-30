@@ -1,0 +1,6 @@
+@AcunmedyaJWTProject_HostAddress = http://localhost:5130
+
+GET {{AcunmedyaJWTProject_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
