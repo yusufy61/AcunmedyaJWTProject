@@ -11,11 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-// JWT Options'larý yapýlandýrýyoruz.
+// JWT Options'larï¿½ yapï¿½landï¿½rï¿½yoruz.
 builder.Services.Configure<JwtTokenOptions>(builder.Configuration.GetSection("JwtTokenOptions"));
 
 
-// Veritabaný baðlantýsýný yapýlandýrýyoruz.
+// Veritabanï¿½ baï¿½lantï¿½sï¿½nï¿½ yapï¿½landï¿½rï¿½yoruz.
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
@@ -23,7 +23,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddIdentity<AppUser, AppRole>()
     .AddEntityFrameworkStores<AppDbContext>();
 
-// JWT Options'larý alýyoruz.
+// JWT Options'larï¿½ alï¿½yoruz.
 var jwtOptions = builder.Configuration.GetSection("JwtTokenOptions").Get<JwtTokenOptions>();
 
 builder.Services.AddAuthentication(options =>
